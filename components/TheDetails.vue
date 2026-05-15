@@ -30,7 +30,7 @@ onMounted(() => {
     <div relative w-full>
       <div h-full w-full py-3 text-white sm:py-7>
         <div class="backdrop" pointer-events-none absolute left-0 top-0 z--1 h-full w-full>
-          <NuxtImg :preload="true" :src="item.backdrop_path" h-full w-full object-cover :alt="item.title" />
+          <NuxtImg :preload="{ fetchPriority: 'high' }" loading="lazy :src="item.backdrop_path" h-full w-full object-cover :alt="item.title" />
         </div>
 
         <div w-full flex flex-col items-center gap-5 px-5 sm:flex-row>
